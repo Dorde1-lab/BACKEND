@@ -17,20 +17,20 @@ namespace ClassesOOPClass7
 
             Dog MyDog = new Dog(name, race, color);
 
-            Console.WriteLine("\n Chose an action for your dog(eat, play, chase)");
+            Console.WriteLine("\n Chose an action for your dog(1. eat, 2. play, 3. chase)");
             string choice = Console.ReadLine();
 
             switch (choice)
             {
-                case 'eat':
+                case "1":
                     Console.WriteLine(MyDog.Eat());
                     break;
 
-                case 'play':
+                case "2":
                     Console.WriteLine(MyDog.Play());
                     break;
 
-                case 'chase':
+                case "3":
                     Console.WriteLine(MyDog.ChaseTail());
                     break;
 
