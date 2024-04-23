@@ -19,7 +19,7 @@ namespace classesOOP.Models
 
         public string[] LearningModules { get; set; }
 
-        private string YearOfAward { get; set; };             // private (dostupan samo u ovoj klasi Teacher)...... dole primer zasto i kako moze postati public;
+        private string YearOfAward { get; set; }            // private (dostupan samo u ovoj klasi Teacher)...... dole primer zasto i kako moze postati public;
 
 
         public void SayHello()

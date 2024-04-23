@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
+    <ProjectReference Include="..\CommonModels\CommonModels.csproj" />
   </ItemGroup>
 
 </Project>

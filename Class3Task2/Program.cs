@@ -1,4 +1,4 @@
-﻿namespanamespace Class3Task2
+﻿namespace Class3Task2
 {
     internal class Program
 {
