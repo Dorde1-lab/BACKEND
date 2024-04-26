@@ -4,7 +4,7 @@ namespace CommonModels.Inheritance.Models
 
 {
 
-    internal class Student : Person
+    public class Student : Person
     {
                 
 
