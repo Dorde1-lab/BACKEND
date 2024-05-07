@@ -53,6 +53,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Class10", "Class10", "{9134
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework Class 8", "Homework Class 8\Homework Class 8.csproj", "{4F93C09E-8005-44D8-8975-A4864DFF860D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Advanced 1", "Advanced 1", "{2F48BC8D-BD11-4722-9E95-072AB5005906}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
