@@ -16,7 +16,7 @@ namespace classesOOP
             professor1.Email = "professor@gmail.com";
             professor1.LearningModules = new string[] { "C# Basic", " Advanced C#", "DataBase" };
 
-            professor1.SayHello();   // pozivanje metode iz konstruktora;
+            professor1.SayHello();   // pozivanje metode iz klase;
 
             professor1.SetYearOfAward("2024");
 

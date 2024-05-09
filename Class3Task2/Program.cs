@@ -14,7 +14,7 @@
                 "Marija", "Maja", "Ana", "Ivana", "Jovana"
         };
 
-        Console.WriteLine("Select a number of array (1 or 2)  you want to display");
+        Console.WriteLine("Select a number of array (1 or 2)  witch you want to display:");
         int option = Convert.ToInt32(Console.ReadLine());
 
         if (option == 1)

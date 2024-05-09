@@ -102,7 +102,7 @@ namespace ClassesOOPClass7
 
             bool trueOrFalse = false;
 
-            foreach(Student item in Students)    // Zasto ovde Student ?
+            foreach(Student item in Students)    // Student je objekat kao tip podatka
             {
                 if(item.Name.ToLower() == namesearched)
                 {

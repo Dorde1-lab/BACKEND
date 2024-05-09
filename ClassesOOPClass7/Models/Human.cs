@@ -17,7 +17,7 @@ namespace Class7Task1.Models
                 this.Age = Age;
             }
 
-
+        
             public string FirsName { get; set; }
 
             public string LastName { get; set; }
