@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HomeworkTask4
 {
-    internal class Manager : Employee
+    public  class Manager : Employee
     {
 
         private double salary;

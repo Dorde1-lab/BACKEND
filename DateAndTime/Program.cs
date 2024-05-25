@@ -51,6 +51,13 @@
 
             string result = exercice1.Substring(index1 + 1, exercice1.Length - index1 - 1);
             Console.WriteLine(result);
+
+
+
+            string str = "The quick brown fox jumps over the lazy dog.";
+            string substr1 = str.Substring(4);     // substr1 je "quick brown fox jumps over the lazy dog."
+            string substr2 = str.Substring(4, 5);  // substr2 je "quick"
+
         }
     }
 }

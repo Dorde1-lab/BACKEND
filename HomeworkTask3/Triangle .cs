@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HomeworkTask3
 {
-    class Triangle : Shape
+    public class Triangle : Shape
     {
         public double side1;
         public double side2;
