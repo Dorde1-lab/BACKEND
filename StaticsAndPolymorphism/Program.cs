@@ -1,4 +1,5 @@
 ﻿using StaticsAndPolymorphism.Helpers;
+using StaticsAndPolymorphism.Models;
 
 namespace StaticsAndPolymorphism
 {
@@ -50,7 +51,20 @@ namespace StaticsAndPolymorphism
 
             Console.WriteLine($"Number of capital chars is: {TextHelpers.NumberOfCapitalLetters(sentence)}");
 
-            Console.WriteLine("------- polymorphism");
+
+
+
+
+
+
+
+
+            Console.WriteLine("-------  POLYMORPHISM -------");
+
+
+
+
+
 
             Dog dog = new Dog();
             dog.Name = "Rex";

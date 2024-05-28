@@ -33,7 +33,14 @@ namespace CollectionInCSharp
 
             Console.WriteLine($"There is {StudentNames.Count} elements in this list");     // Metoda Count - izbacuje broj elementa u listi.
 
+
+
+
             List<int> numbers = new List<int>() { 10, 10, 20, 30, 44, 1000, 43243 };             // inicijalizacija liste    !!!!!!!!!!!
+
+
+
+
 
             foreach (int number in numbers)
             {

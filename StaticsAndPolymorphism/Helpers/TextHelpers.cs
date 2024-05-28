@@ -31,7 +31,7 @@ namespace StaticsAndPolymorphism.Helpers
             else
             {
                 editedWord = char.ToUpper(word[0]) + word.Substring(1);
-            }
+`            }
 
             CapitalLetterUses++;    // uvecava samo kada se izvrsi metoda
             return editedWord;
