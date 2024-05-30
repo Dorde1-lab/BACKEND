@@ -22,17 +22,17 @@ namespace Homework1Static
 
         {
             new User (1, "Marko", 33 ),
-            new User(1, "Mirko", 33 ),
-            new User(1, "Ivan", 33 ),
+            new User(4, "Mirko", 44 ),
+            new User(6, "Ivan", 66 ),
         };
 
-        public static List<User> Search(int? id = null, string name = null, int? age = null)
+        public static List<User> Search(int? id = null, string name = null, int? age = null)        // ovakav null omogucava da se u pozivu prosledi argument i filtrira samo po njemu
         {
             return Users.Where(user =>
-
-            (!id.HasValue || user.Id == id.Value) &&
-            (string.IsNullOrEmpty(name) || user.Name.Contains(name, System.StringComparison.OrdinalIgnoreCase)) &&    // proverava da li sadrzi Name bez obzira na velika slova
-            (!age.HasValue || user.Age == age.Value)
+                (!id.HasValue || user.Id == id.Value) &&
+                (string.IsNullOrEmpty(name) || user.Name.Contains(name, System.StringComparison.OrdinalIgnoreCase)) &&   //  proverava da li sadrzi Name bez obzira na velika slova
+                (!age.HasValue || user.Age == age.Value)
             ).ToList();
         }
     }
+}

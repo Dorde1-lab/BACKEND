@@ -14,11 +14,11 @@ namespace Homework1Static
         public int Age { get; set; }
 
 
-        public User(int Id, string Name, int Age)
+        public User(int id, string name, int age)
         {
-            Id = Id;
-            Name = Name;
-            Age = Age;
+            Id = id;
+            Name = name;
+            Age = age;
         }
 
     }
