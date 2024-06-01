@@ -9,7 +9,7 @@ namespace GettersAndSetters
     public class Person
     {
 
-        private string _firstName;
+        private string _firstName;                 // crtica oznacava da je rec o privatnom polju 
         public string FirstName                               // full property 
         {
             get { return _firstName; }

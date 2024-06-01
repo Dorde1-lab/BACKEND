@@ -6,7 +6,7 @@
         {
 
             string absoultePath = "E:\\cv\\SEDC\\BACKEND\\BACKEND\\WorkingWithFiles";
-             
+
             string currentDirectory = Directory.GetCurrentDirectory();                                             // Directory.GetCurrentDirectory();  - trenutni folder
 
 
@@ -19,17 +19,18 @@
 
 
 
-            if (Directory.Exists(newFolderPath) == false) {
+            if (Directory.Exists(newFolderPath) == false)
+            {
 
                 // if directory does not exists, create new one.
-            DirectoryInfo directoryInfo = Directory.CreateDirectory (newFolderPath);                      // - ako ne postoji kreiram novi folder
+                DirectoryInfo directoryInfo = Directory.CreateDirectory(newFolderPath);                      // - ako ne postoji kreiram novi folder
 
             }
             // path to the new file
             string newFilePath = newFolderPath + "\\test.txt";                                           // puna putanja do fajla
 
 
-            if(File.Exists(newFilePath) == false)
+            if (File.Exists(newFilePath) == false)
             {
                 // createing new file in C#
                 FileStream newFile = File.Create(newFilePath);                                            // ako ne postji fajl, kreiramo ga ovako
@@ -47,8 +48,8 @@
 
             if (File.Exists(newFilePath))
             {
-                string content = File.ReadAllText(newFilePath);                                      // metoda File.ReadAllText() - cita sav tekst sa fajla.
-                Console.WriteLine(content);
+                string content = File.ReadAllText(newFilePath);                 // metoda File.ReadAllText() - cita ceo sadrzaj datoteke sa fajla kao jedan string. Vraca string
+                Console.WriteLine(content);                                     // metoda File.ReadAllLines() - cita sve liniju po liniju. Vraca niz stringova.
 
 
 
@@ -56,7 +57,7 @@
                 Console.WriteLine("Type additional content for this txt:");
                 string userInputContent = Console.ReadLine();
 
-                File.AppendAllText(newFilePath, "\n" + userInputContent);        // prvo je file a drugo sadrzaj koji prosledjujemo  - Metoda AppendAllText;
+                File.AppendAllText(newFilePath, "\n" + userInputContent);        // prvo je file a drugo sadrzaj koji prosledjujemo  - Metoda AppendAllText;     !!!!!!!!!!!!!!
 
 
 
@@ -88,7 +89,7 @@
             string streamFilesFolder = Directory.GetCurrentDirectory() + "\\streams";
             string longTextFile = streamFilesFolder + "\\longText.txt";
 
-            if(Directory.Exists(streamFilesFolder) == false)
+            if (Directory.Exists(streamFilesFolder) == false)
             {
                 Directory.CreateDirectory(streamFilesFolder);
                 Console.WriteLine("The folder created");
@@ -96,9 +97,9 @@
 
 
 
-            if(File.Exists(longTextFile) == false)
+            if (File.Exists(longTextFile) == false)
             {
-                File.Create(longTextFile).Close();
+                File.Create(longTextFile).Close();                                       // skracena verzija 
             }
 
             StreamWriter streamWriter = new StreamWriter(longTextFile);
@@ -122,6 +123,8 @@
                 streamWriterAppend.WriteLine("6.Tamara");
                 streamWriterAppend.WriteLine("7.Zarko");
             }
+
+
 
 
 
@@ -164,7 +167,7 @@
             string currentDirectory1 = Directory.GetCurrentDirectory();
             string folderExercise = currentDirectory1 + "\\Exercise";
 
-            if(Directory.Exists(folderExercise) == false)
+            if (Directory.Exists(folderExercise) == false)
             {
                 DirectoryInfo directory1 = Directory.CreateDirectory(folderExercise);                              // DirectoryFile
             }
@@ -173,55 +176,53 @@
 
             string fileCalculatios = folderExercise + "\\Calculations";
 
-            if(File.Exists(fileCalculatios) == false)
+            if (File.Exists(fileCalculatios) == false)
             {
                 FileStream file1 = File.Create(fileCalculatios);
-                file1.Close ();
+                file1.Close();
             }
 
 
-            
+
             int i = 0;
-            while(i < 3)
+
+            using (StreamWriter streamWriterExercise = new StreamWriter(fileCalculatios))
             {
-                Console.WriteLine("Unesi jedan broj");
-                int number1 = int.Parse(Console.ReadLine());
 
-                Console.WriteLine("Unesi drugi broj");
-                int number2 = int.Parse(Console.ReadLine());
-
-
-                StreamWriter streamWriterExercise = new StreamWriter(fileCalculatios, true);
-
-                using (streamWriterExercise)
+                while (i < 3)
                 {
-                    streamWriterExercise.WriteLine(MethodCalculates(number1, number2));         
+                    Console.WriteLine("Unesi jedan broj");
+                    int number1 = int.Parse(Console.ReadLine());
+
+                    Console.WriteLine("Unesi drugi broj");
+                    int number2 = int.Parse(Console.ReadLine());
+
+
+                    streamWriterExercise.WriteLine(MethodCalculates(number1, number2));
+
+                    i++;
                 }
-                i++;
+                
             }
 
-            
+
+
+
+            static string MethodCalculates(int number1, int number2)
+            {
+                int result = number1 + number2;
+
+                return ($"Broj 1 je: {number1}, broj 2 je: {number2} i rezultat je: {result.ToString()} and date: {DateTime.Now}.");
+            }
+
+
+
+
+
+
+
 
 
         }
-
-
-
-
-        static public string MethodCalculates(int number1, int number2)
-        {
-            int result = number1 + number2;
-
-            return ($"Broj 1 je: {number1}, broj 2 je: {number2} i rezultat je: {result.ToString()} and date: {DateTime.Now}.");      
-        }
-
-
-
-
-
-
-
-
-
     }
 }
