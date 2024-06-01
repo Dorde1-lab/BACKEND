@@ -70,9 +70,13 @@ namespace Files
 
                 if (helperVar)
                 {
-                    File.AppendAllText(newFile, fileStartingWithLetter);
+                    string wholePath = newFolder + fileStartingWithLetter;
 
-                    StreamWriter streamWriter = new StreamWriter(fileStartingWithLetter);
+
+                   // string filePath = Path.Combine(newFolder, fileStartingWithLetter);                   // kako se koristi Path.Combine ? 
+                   // File.AppendAllText(filePath, "\n" + fileStartingWithLetter);                         // Kako da mi se izbrise sve prethodno sto sam uneo?
+
+                    StreamWriter streamWriter = new StreamWriter(wholePath);
 
                     using (streamWriter)
                     {
