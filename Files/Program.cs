@@ -40,7 +40,7 @@ namespace Files
                 i++;
             }
 
-            string[] content1 = File.ReadAllLines(newFile);
+            string[] content1 = File.ReadAllLines(newFile);                                            // ReadAllLines - pravi niz stringova
 
             foreach (string content in content1)
             {
@@ -73,8 +73,8 @@ namespace Files
                     string wholePath = newFolder + fileStartingWithLetter;
 
 
-                   // string filePath = Path.Combine(newFolder, fileStartingWithLetter);                   // kako se koristi Path.Combine ? 
-                   // File.AppendAllText(filePath, "\n" + fileStartingWithLetter);                         // Kako da mi se izbrise sve prethodno sto sam uneo?
+                   // string filePath = Path.Combine(newFolder, fileStartingWithLetter);                   // kako se koristi Path.Combine (kao linija 73 ?) ? 
+                                                                                                           // Kako da mi se izbrise sve prethodno sto sam uneo?
 
                     StreamWriter streamWriter = new StreamWriter(wholePath);
 
@@ -85,8 +85,7 @@ namespace Files
                            streamWriter.WriteLine(firstContent);
                         }
                     }
-
-                    Console.WriteLine($"Imena koja pocinju na slovo {firstChar} se nalaze u fajlu {fileStartingWithLetter}");
+                                                                                                             // Task 4 ostao.
                 }
             }
         }
