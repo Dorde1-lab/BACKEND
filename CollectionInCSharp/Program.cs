@@ -19,7 +19,7 @@ namespace CollectionInCSharp
 
             Console.WriteLine("Student Names:");
 
-            foreach(string name in StudentNames)
+            foreach (string name in StudentNames)
             {
                 Console.WriteLine(name);
             }
@@ -47,13 +47,13 @@ namespace CollectionInCSharp
                 Console.WriteLine(number);
             }
 
-            Console.WriteLine($"On position 3 there is a numebr: {numbers[2]}");         
+            Console.WriteLine($"On position 3 there is a numebr: {numbers[2]}");
             Console.WriteLine($"On postion 5 there is a number: {numbers.ElementAt(4)}");       // Element na odredjenoj poziciji
 
             numbers.RemoveAt(1);                                                             // Brisanje elementa na odredjenoj poziciji
             Console.WriteLine($"On position 2 there is a number: {numbers[1]}");
 
-          
+
             //  Add();
             // Remove();
             // Contains().
@@ -80,7 +80,7 @@ namespace CollectionInCSharp
             studentsGrades.Add("Sava", 10);
 
             Console.WriteLine("Student's grades:");
-            foreach(KeyValuePair<string, int> grade in studentsGrades)
+            foreach (KeyValuePair<string, int> grade in studentsGrades)
             {
                 Console.WriteLine($"Student: {grade.Key} - ocena: {grade.Value}");
             }
@@ -111,7 +111,7 @@ namespace CollectionInCSharp
             // ContainsValue();
             // Count;
 
-     
+
 
 
 
@@ -177,7 +177,7 @@ namespace CollectionInCSharp
             foreach (string element in cookies)
             {
                 Console.WriteLine(element);
-            }  
+            }
 
             cookies.Pop();
             cookies.Pop();
@@ -196,62 +196,55 @@ namespace CollectionInCSharp
 
             Console.WriteLine("________________________________________");
 
-            
 
 
 
-                List<string> students = new List<string>()
+
+            List<string> students = new List<string>()
             {
                 "Tamara", "Sava", "Goran", "Milica", "John", "Manuel", "Stefan", "Almir"
             };
 
-                foreach (string studentName in students)
-                {
-                    if (studentName.Length == 4)
-                        Console.WriteLine($"Ovaj student ima 4 slova u svom imenu {studentName}");
-                }
+            foreach (string studentName in students)
+            {
+                if (studentName.Length == 4)
+                    Console.WriteLine($"Ovaj student ima 4 slova u svom imenu {studentName}");
+            }
 
-                // Manual approach
-                List<string> studentsWith5Letters = new List<string>();
+            // Manual approach
+            List<string> studentsWith5Letters = new List<string>();
 
-                foreach (string studentName in students)
-                {
-                    if (studentName.Length == 5)
-                        studentsWith5Letters.Add(studentName);
-                }
-
-
-                // LINQ approach
-         
+            foreach (string studentName in students)
+            {
+                if (studentName.Length == 5)
+                    studentsWith5Letters.Add(studentName);
+            }
 
 
-                //  WHERE       -  filtrira 
-
-                List<string> studentsWithFiveLetters = students
-                    .Where(item => item.Length == 5)
-                    .ToList();
-
-
-                Console.WriteLine("Pet slova u svom imenu");
-                foreach (string studentName in studentsWithFiveLetters)
-                    Console.WriteLine(studentName);
+            // LINQ approach
 
 
 
+            //  WHERE       -  filtrira 
 
-                // SELECT       -  ne vrsi filtriranje, samo mapira i transformise elemente
-
-                List<int> studentNameLengths = students
-               .Select(item => item.Length)
-               .ToList();
+            List<string> studentsWithFiveLetters = students
+                .Where(item => item.Length == 5)
+                .ToList();
 
 
-            // FIRST  and  LAST
+            Console.WriteLine("Pet slova u svom imenu");
+            foreach (string studentName in studentsWithFiveLetters)
+                Console.WriteLine(studentName);
 
-            Person stefanPerson = FansArray
-           .Where(p => p.FirstName == "Stefan" && p.Age == 26)
-           .First();    //  vrati prvu pojavu sa ovim parametrima.
-             
+
+
+
+            // SELECT       -  ne vrsi filtriranje, samo mapira i transformise elemente
+
+            List<int> studentNameLengths = students
+           .Select(item => item.Length)
+           .ToList();
+
 
         }
     }

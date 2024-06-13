@@ -5,7 +5,7 @@ namespace Reference
     {
         static void Main(string[] args)
         {
-            Student Almir = new Student();
+         //   Student Almir = new Student();
         }
     }
 }
